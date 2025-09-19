@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:geolocator/geolocator.dart';
 
 class ApiService {
-  final String googleMapsApiKey = "APIKEY";
+  final String googleMapsApiKey = "AIzaSyBhs5irTAVjEjLR1McJJI3p098AFxX9SHQ";
 
   Future<List<dynamic>> getNearbyPoliceStations(Position position) async {
     final lat = position.latitude;
