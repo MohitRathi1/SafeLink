@@ -1,7 +1,9 @@
 
 # SafeLink 🚨
 
-**SafeLink** is a Flutter-based mobile application designed to help users find the nearest police stations and navigate to them safely. The app leverages the power of Google Maps to provide real-time location tracking and turn-by-turn directions.
+**SafeLink** is a mobile application designed as a crucial tool for child and family safety. In a world where immediate access to help is vital, SafeLink provides a simple, direct way for a child to find the nearest safe haven in an emergency and for parents to have peace of mind.
+
+The app's primary function is to help a child quickly locate and navigate to the nearest police station or safe zone, ensuring they can get help when they need it most.
 
 ## ✨ Features
 
