@@ -1,3 +1,5 @@
+// components/bottom_nav_bar.dart
+
 import 'package:flutter/material.dart';
 
 class BottomNavBar extends StatelessWidget {
@@ -15,14 +17,44 @@ class BottomNavBar extends StatelessWidget {
     return BottomNavigationBar(
       currentIndex: currentIndex,
       onTap: onTap,
-      items: const [
+      backgroundColor: Colors.white,
+      selectedItemColor: Colors.black,
+      unselectedItemColor: Colors.black,
+      showSelectedLabels: true,
+      showUnselectedLabels: true,
+      selectedLabelStyle: const TextStyle(fontSize: 10, color: Colors.black),
+      unselectedLabelStyle: const TextStyle(fontSize: 10, color: Colors.black),
+      items: [
         BottomNavigationBarItem(
-          icon: Icon(Icons.security),
+          icon: Image.asset(
+            'assets/home2.png',
+            width: 24,
+            height: 24,
+          ),
           label: 'Home',
         ),
         BottomNavigationBarItem(
-          icon: Icon(Icons.map),
-          label: 'Safe Places',
+          icon: Container(
+            padding: const EdgeInsets.all(12),
+            decoration: BoxDecoration(
+              color: const Color(0xFFFF5252),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(
+              Icons.warning_amber,
+              color: Colors.white,
+              size: 30,
+            ),
+          ),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Image.asset(
+            'assets/safeplace.png',
+            width: 24,
+            height: 24,
+          ),
+          label: 'Safe place',
         ),
       ],
     );

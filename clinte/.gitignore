@@ -125,6 +125,7 @@ app.*.symbols
 # -------------------
 migrate_working_dir/
 
+
 # 🔐 Sensitive Files – These should never be committed
 clinte/google-services.json
 clinte/android/app/google-services.json
