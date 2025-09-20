@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "647582114872",
+    "project_id": "safellink",
+    "storage_bucket": "safellink.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647582114872:android:919e615c48a84baa7df2cd",
+        "android_client_info": {
+          "package_name": "com.example.newapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2zNPiio0retbW4MexhiwnidWIsQTQQas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
