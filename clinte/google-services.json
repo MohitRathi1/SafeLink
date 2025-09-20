@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "647582114872",
+    "project_id": "safellink",
+    "storage_bucket": "safellink.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647582114872:android:14f0284cd81f0f0e7df2cd",
+        "android_client_info": {
+          "package_name": "com.example.SafeLink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647582114872-2aegnm1h0j784qg9evkbsg76eagmcmfi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.SafeLink",
+            "certificate_hash": "a73d86bef142973b9964647eb87ed708476c865a"
+          }
+        },
+        {
+          "client_id": "647582114872-hske2is532at8cbd4te6a6nacp2i7duu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2zNPiio0retbW4MexhiwnidWIsQTQQas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647582114872-hske2is532at8cbd4te6a6nacp2i7duu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "647582114872-5qn45qbig8a11ir2h0p7jimf9t59oj7c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.clinte"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:647582114872:android:919e615c48a84baa7df2cd",
+        "android_client_info": {
+          "package_name": "com.example.newapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "647582114872-hske2is532at8cbd4te6a6nacp2i7duu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2zNPiio0retbW4MexhiwnidWIsQTQQas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "647582114872-hske2is532at8cbd4te6a6nacp2i7duu.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "647582114872-5qn45qbig8a11ir2h0p7jimf9t59oj7c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.clinte"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
