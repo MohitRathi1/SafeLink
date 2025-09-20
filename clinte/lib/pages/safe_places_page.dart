@@ -88,7 +88,7 @@ class _SafePlacesPageState extends State<SafePlacesPage> {
       icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
     ));
 
-    final url = 'https://maps.googleapis.com/maps/api/directions/json?'
+    final String url = 'https://maps.googleapis.com/maps/api/directions/json?'
         'origin=${_currentPosition.latitude},${_currentPosition.longitude}&'
         'destination=${stationLocation.latitude},${stationLocation.longitude}&'
         'key=${_apiService.googleMapsApiKey}';
@@ -96,19 +96,31 @@ class _SafePlacesPageState extends State<SafePlacesPage> {
     final response = await http.get(Uri.parse(url));
     if (response.statusCode == 200) {
       final data = json.decode(response.body);
-      final points = data['routes'][0]['overview_polyline']['points'];
-      final polyline = PolylinePoints.decodePolyline(points);
 
-      final coords = polyline.map((p) => LatLng(p.latitude, p.longitude)).toList();
+      // Check if 'routes' list is not empty before accessing
+      if (data['routes'] != null && data['routes'].isNotEmpty) {
+        final points = data['routes'][0]['overview_polyline']['points'];
+        final polyline = PolylinePoints.decodePolyline(points);
 
-      setState(() {
-        _polylines.add(Polyline(
-          polylineId: const PolylineId('route'),
-          points: coords,
-          color: Colors.red,
-          width: 5,
-        ));
-      });
+        final coords = polyline.map((p) => LatLng(p.latitude, p.longitude)).toList();
+
+        setState(() {
+          _polylines.add(Polyline(
+            polylineId: const PolylineId('route'),
+            points: coords,
+            color: Colors.red,
+            width: 5,
+          ));
+        });
+      } else {
+        // Handle no route found scenario
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('No route found to this location.')),
+        );
+        print('No route found between current location and station.');
+      }
+    } else {
+      print('Failed to get route data. Status code: ${response.statusCode}');
     }
   }
 
@@ -144,7 +156,7 @@ class _SafePlacesPageState extends State<SafePlacesPage> {
           child: ListTile(
             leading: const Icon(Icons.local_police),
             title: Text(name),
-            subtitle: Text('Tap to view on map'),
+            subtitle: const Text('Tap to view on map'),
             onTap: () => _displayRouteTo(LatLng(lat, lng), name),
           ),
         );

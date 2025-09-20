@@ -1,6 +1,7 @@
 // HomePage.dart
 import 'package:flutter/material.dart';
 import 'package:clinte/pages/NowMapPage.dart';
+import 'package:clinte/pages/MySpotPage.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:io';
 
@@ -128,7 +129,12 @@ class _HomeScreenContentState extends State<_HomeScreenContent> {
                   'My Spot',
                   'assets/myspot.png',
                   const Color(0xFFFFFDE7),
-                  () {},
+                  () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const MySpotPage()),
+                    );
+                  },
                 ),
               ],
             ),

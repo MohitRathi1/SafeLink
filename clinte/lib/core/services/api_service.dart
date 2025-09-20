@@ -11,7 +11,8 @@ class ApiService {
     final lat = position.latitude;
     final lng = position.longitude;
 
-    final url = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'
+    final url =
+        'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'
         'location=$lat,$lng&radius=1500&type=police&key=$googleMapsApiKey';
 
     final response = await http.get(Uri.parse(url));
